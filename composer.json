@@ -29,9 +29,12 @@
       "mkdir -p $PWD/Tests/",
       "cp -r $PWD/vendor/drd-plus/rules-html-skeleton/Tests/* $PWD/Tests/",
       "echo '*' > $PWD/Tests/.gitignore",
-      "rm -fr $PWD/images/generic && ln -s $PWD/vendor/drd-plus/rules-html-skeleton/images/generic $PWD/images/generic",
-      "rm -fr $PWD/css/generic && ln -s $PWD/vendor/drd-plus/rules-html-skeleton/css/generic $PWD/css/generic",
-      "rm -fr $PWD/js/generic && ln -s $PWD/vendor/drd-plus/rules-html-skeleton/js/generic $PWD/js/generic"
+      "rm -fr ./images/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/images/generic ./images/generic",
+      "rm -fr ./css/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/css/generic ./css/generic",
+      "rm -fr ./js/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/js/generic ./js/generic"
+    ],
+    "post-install-cmd": [
+      "rm cache/pages/*"
     ]
   }
 }
