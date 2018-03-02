@@ -25,6 +25,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
+    "pre-update-cmd": [
+      "cd $PWD/vendor/drd-plus/rules-html-skeleton && git checkout *.css"
+    ],
+    "pre-install-cmd": [
+      "cd $PWD/vendor/drd-plus/rules-html-skeleton && git checkout *.css"
+    ],
     "pre-autoload-dump": [
       "mkdir -p $PWD/Tests/",
       "cp -r $PWD/vendor/drd-plus/rules-html-skeleton/Tests/* $PWD/Tests/",
