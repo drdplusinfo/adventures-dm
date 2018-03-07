@@ -43,8 +43,9 @@
       "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css"
     ],
     "post-install-cmd": [
+      "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css",
       "rm -f cache/pages/*",
-      "./vendor/drd-plus/rules-html-skeleton/bin/assets --dir=css"
+      "wget https://dobrodruzstvi.ppj.drdplus.info/ --background --output-document=- --output-file=- >> /dev/null"
     ]
   }
 }
