@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-frontend-skeleton.git",
-                "reference": "842b733742c10898f56b5268d4860431f21c7daa"
+                "reference": "78a28a8bf6580481d91c9407c3f8975c337267c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/842b733742c10898f56b5268d4860431f21c7daa",
-                "reference": "842b733742c10898f56b5268d4860431f21c7daa",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/78a28a8bf6580481d91c9407c3f8975c337267c4",
+                "reference": "78a28a8bf6580481d91c9407c3f8975c337267c4",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-05-17 06:13:56"
+            "time": "2018-05-18 15:36:01"
         },
         {
             "name": "drd-plus/rules-html-skeleton",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "5925b8c177b184c247886f4ed9a10a0ed2af6e3f"
+                "reference": "24f6f77d85b29b41f598fd0cf7e13bc4f55eda8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/5925b8c177b184c247886f4ed9a10a0ed2af6e3f",
-                "reference": "5925b8c177b184c247886f4ed9a10a0ed2af6e3f",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/24f6f77d85b29b41f598fd0cf7e13bc4f55eda8a",
+                "reference": "24f6f77d85b29b41f598fd0cf7e13bc4f55eda8a",
                 "shasum": ""
             },
             "require": {
@@ -89,8 +89,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "DrdPlus\\": "DrdPlus/",
-                    "Tests\\": "Tests/"
+                    "DrdPlus\\": "DrdPlus/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -104,7 +103,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-05-17 07:41:23"
+            "time": "2018-05-18 16:17:05"
         },
         {
             "name": "granam/exceptions-hierarchy",
