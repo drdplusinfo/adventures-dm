@@ -1,8 +1,10 @@
 <?php
-const FREE_ACCESS = true;
-const JUST_TEXT_TESTING = true;
-// const NO_EXTERNAL_ANCHORS_WITH_HASH_EXPECTED = true;
-// const NOT_FOR_PLAYERS = true;
-// SINGLE_VERSION_ONLY = true;
-// WITHOUT_SPECIFIC_JOURNAL = true;
-const NO_AUTHORS = true;
+global $testsConfiguration;
+$testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration();
+$testsConfiguration->setHasProtectedAccess(false);
+$testsConfiguration->setHasAuthors(false);
+$testsConfiguration->setCanBeBoughtOnEshop(false);
+$testsConfiguration->setHasTables(false);
+$testsConfiguration->setSomeExpectedTableIds([]);
+$testsConfiguration->setHasLinksToJournals(false);
+$testsConfiguration->setHasLinkToSingleJournal(false);
