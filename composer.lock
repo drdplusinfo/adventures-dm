@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-frontend-skeleton.git",
-                "reference": "7fe2c2274939a2e60aeb2d29667ae77facfc0c03"
+                "reference": "bdcb4f4fbea563a2c76cfc3ccc46db0e2dc8c4e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/7fe2c2274939a2e60aeb2d29667ae77facfc0c03",
-                "reference": "7fe2c2274939a2e60aeb2d29667ae77facfc0c03",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/bdcb4f4fbea563a2c76cfc3ccc46db0e2dc8c4e2",
+                "reference": "bdcb4f4fbea563a2c76cfc3ccc46db0e2dc8c4e2",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-05-23 13:38:56"
+            "time": "2018-05-24 09:32:16"
         },
         {
             "name": "drd-plus/rules-html-skeleton",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "e83aa4f425973a4e873b74d1fccbae2c0544ee05"
+                "reference": "33be97c3a3bdefe3615db96c25820c0b8e0249c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/e83aa4f425973a4e873b74d1fccbae2c0544ee05",
-                "reference": "e83aa4f425973a4e873b74d1fccbae2c0544ee05",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/33be97c3a3bdefe3615db96c25820c0b8e0249c5",
+                "reference": "33be97c3a3bdefe3615db96c25820c0b8e0249c5",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-05-23 13:43:29"
+            "time": "2018-05-24 09:31:14"
         },
         {
             "name": "granam/exceptions-hierarchy",
@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/granam-string.git",
-                "reference": "af7af196745569b3e503bac29359eefc7a9cc53c"
+                "reference": "663e994e68fef4980a0ff7c6f3ef9bc8e9844b4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/granam-string/zipball/af7af196745569b3e503bac29359eefc7a9cc53c",
-                "reference": "af7af196745569b3e503bac29359eefc7a9cc53c",
+                "url": "https://api.github.com/repos/jaroslavtyc/granam-string/zipball/663e994e68fef4980a0ff7c6f3ef9bc8e9844b4f",
+                "reference": "663e994e68fef4980a0ff7c6f3ef9bc8e9844b4f",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
                 "php",
                 "string"
             ],
-            "time": "2018-05-23 07:40:42"
+            "time": "2018-05-24 05:52:48"
         },
         {
             "name": "granam/tools",

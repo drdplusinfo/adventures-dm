@@ -8,3 +8,4 @@ $testsConfiguration->setHasTables(false);
 $testsConfiguration->setSomeExpectedTableIds([]);
 $testsConfiguration->setHasLinksToJournals(false);
 $testsConfiguration->setHasLinkToSingleJournal(false);
+$testsConfiguration->setHasDebugContacts(false);
