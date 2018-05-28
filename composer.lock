@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaroslavtyc/drd-plus-rules-html-skeleton.git",
-                "reference": "33be97c3a3bdefe3615db96c25820c0b8e0249c5"
+                "reference": "4614ea348a95e3569638e544e334eed2b16bc1e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/33be97c3a3bdefe3615db96c25820c0b8e0249c5",
-                "reference": "33be97c3a3bdefe3615db96c25820c0b8e0249c5",
+                "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-rules-html-skeleton/zipball/4614ea348a95e3569638e544e334eed2b16bc1e4",
+                "reference": "4614ea348a95e3569638e544e334eed2b16bc1e4",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-05-24 09:31:14"
+            "time": "2018-05-24 13:57:19"
         },
         {
             "name": "granam/exceptions-hierarchy",
@@ -817,16 +817,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.4.14",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "229249212e041bc3cd5d88f65965d9391dad3852"
+                "reference": "534d4e4f0f31da494026a3761fad020c20b8debf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/229249212e041bc3cd5d88f65965d9391dad3852",
-                "reference": "229249212e041bc3cd5d88f65965d9391dad3852",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/534d4e4f0f31da494026a3761fad020c20b8debf",
+                "reference": "534d4e4f0f31da494026a3761fad020c20b8debf",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +844,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -878,7 +878,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2018-05-04 11:54:21"
+            "time": "2018-05-25 09:33:08"
         }
     ],
     "packages-dev": [
