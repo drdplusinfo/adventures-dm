@@ -17,34 +17,28 @@
     "php": ">=7.1",
     "roave/security-advisories": "dev-master",
     "granam/string": "dev-master",
-    "drd-plus/rules-html-skeleton": "dev-master"
+    "drd-plus/rules-skeleton": "dev-master"
   },
   "require-dev": {
-    "phpunit/phpunit": "~6.0",
+    "phpunit/phpunit": "~7.0",
     "mockery/mockery": "^1.1"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
-    "pre-update-cmd": [
-      "if [ -d ./vendor/drd-plus/rules-html-skeleton ]; then cd ./vendor/drd-plus/rules-html-skeleton && git checkout *.css; fi"
-    ],
-    "pre-install-cmd": [
-      "if [ -d ./vendor/drd-plus/rules-html-skeleton ]; then cd ./vendor/drd-plus/rules-html-skeleton && git checkout *.css; fi"
-    ],
     "pre-autoload-dump": [
-      "rm -f DrdPlus/Tests/RulesSkeleton && cd DrdPlus/Tests && ln -s ../../vendor/drd-plus/rules-html-skeleton/DrdPlus/Tests/RulesSkeleton RulesSkeleton",
-      "cp --no-clobber vendor/drd-plus/rules-html-skeleton/phpunit.xml.dist $PWD",
-      "rm -f ./images/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/images/generic ./images/generic",
-      "rm -f ./css/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/css/generic ./css/generic",
-      "rm -f ./js/generic && ln -s ../vendor/drd-plus/rules-html-skeleton/js/generic ./js/generic",
+      "rm -f DrdPlus/Tests/RulesSkeleton && cd DrdPlus/Tests && ln -s ../../vendor/drd-plus/rules-skeleton/DrdPlus/Tests/RulesSkeleton RulesSkeleton",
+      "cp --no-clobber vendor/drd-plus/rules-skeleton/phpunit.xml.dist $PWD",
+      "rm -fr ./css/generic && cp -r ./vendor/drd-plus/rules-skeleton/css/generic ./css/generic",
+      "rm -f ./images/generic && ln -s ../vendor/drd-plus/rules-skeleton/images/generic ./images/generic",
+      "rm -f ./js/generic && ln -s ../vendor/drd-plus/rules-skeleton/js/generic ./js/generic",
       "find ./cache -mindepth 2 -type f -exec rm {} +"
     ],
     "post-update-cmd": [
-      "php ./vendor/drd-plus/frontend-skeleton/bin/assets --dir=css"
+      "php ./vendor/bin/assets --dir=css"
     ],
     "post-install-cmd": [
-      "php ./vendor/drd-plus/frontend-skeleton/bin/assets --dir=css",
+      "php ./vendor/bin/assets --dir=css",
       "wget https://dobrodruzstvi.ppj.drdplus.info --background --output-document=/dev/null --output-file=/dev/null >> /dev/null"
     ]
   }
