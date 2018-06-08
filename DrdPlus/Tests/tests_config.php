@@ -11,3 +11,5 @@ $testsConfiguration->disableHasDebugContacts();
 $testsConfiguration->disableHasCustomBodyContent();
 $testsConfiguration->setSomeExpectedTableIds([]);
 $testsConfiguration->setBlockNamesToExpectedContent([]);
+$testsConfiguration->setExpectedWebName('DrD+ dobrodružství');
+$testsConfiguration->setExpectedPageTitle('💥 DrD+ dobrodružství');
