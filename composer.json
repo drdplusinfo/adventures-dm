@@ -27,8 +27,7 @@
   "prefer-stable": true,
   "scripts": {
     "pre-autoload-dump": [
-      "rm -f DrdPlus/Tests/RulesSkeleton && cd DrdPlus/Tests && ln -s ../../vendor/drd-plus/rules-skeleton/DrdPlus/Tests/RulesSkeleton RulesSkeleton",
-      "cp --no-clobber vendor/drd-plus/rules-skeleton/phpunit.xml.dist $PWD",
+      "rm -f DrdPlus/Tests/RulesSkeleton && ln -s ../../vendor/drd-plus/rules-skeleton/DrdPlus/Tests/RulesSkeleton ./DrdPlus/Tests/",
       "rm -fr ./css/generic && cp -r ./vendor/drd-plus/rules-skeleton/css/generic ./css/generic",
       "rm -f ./images/generic && ln -s ../vendor/drd-plus/rules-skeleton/images/generic ./images/generic",
       "rm -f ./js/generic && ln -s ../vendor/drd-plus/rules-skeleton/js/generic ./js/generic",
