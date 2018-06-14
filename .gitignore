@@ -1,10 +1,6 @@
 /.idea
 /vendor
 /phpunit_log
-/web/images
-/web/css
-/web/js
 /js/generic
 /images/generic
-/cache/*
 /composer_install_result.txt
