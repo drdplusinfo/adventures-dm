@@ -11,6 +11,5 @@ $controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
         $vendorRoot
     );
 $controller->setFreeAccess();
-$controller->setContactsFixed();
 
 require __DIR__ . '/vendor/drd-plus/rules-skeleton/index.php';
