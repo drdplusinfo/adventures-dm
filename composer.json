@@ -1,6 +1,6 @@
 {
   "name": "drd-plus/adventures-dm",
-  "license": "proprietary",
+  "license": "MIT",
   "type": "library",
   "description": "Adventures from DrD+ DM rules",
   "keywords": [
@@ -34,11 +34,11 @@
       "find ./cache -mindepth 2 -type f -exec rm {} +"
     ],
     "post-update-cmd": [
-      "php ./vendor/bin/assets --dir=css"
+      "php ./vendor/bin/assets --css --dir=css"
     ],
     "post-install-cmd": [
-      "php ./vendor/bin/assets --dir=css",
-      "wget https://dobrodruzstvi.ppj.drdplus.info --background --output-document=/dev/null --output-file=/dev/null >> /dev/null"
+      "php ./vendor/bin/assets --css --dir=css",
+      "wget https://dobrodruzstvi.ppj.drdplus.info --background --output-document=- --output-file=/dev/null >> /dev/null"
     ]
   }
 }

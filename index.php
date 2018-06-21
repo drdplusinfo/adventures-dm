@@ -3,9 +3,11 @@ $documentRoot = $documentRoot ?? (PHP_SAPI !== 'cli' ? \rtrim(\dirname($_SERVER[
 $webRoot = $webRoot ?? $documentRoot . '/web/passed';
 $vendorRoot = $vendorRoot ?? $documentRoot . '/vendor';
 
+/** @noinspection PhpIncludeInspection */
 require_once $vendorRoot . '/autoload.php';
 
 $controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
+        \DrdPlus\RulesSkeleton\HtmlHelper::createFromGlobals($documentRoot),
         $documentRoot,
         $webRoot,
         $vendorRoot
