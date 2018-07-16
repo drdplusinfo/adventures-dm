@@ -40,7 +40,6 @@
     ],
     "post-install-cmd": [
       "php ./vendor/bin/assets --css --dir=css",
-      "wget https://dobrodruzstvi.ppj.drdplus.info --background --output-document=- --output-file=/dev/null >> /dev/null"
-    ]
+    ]<
   }
 }
