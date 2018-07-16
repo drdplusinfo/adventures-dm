@@ -39,7 +39,7 @@
       "php ./vendor/bin/assets --css --dir=css"
     ],
     "post-install-cmd": [
-      "php ./vendor/bin/assets --css --dir=css",
-    ]<
+      "php ./vendor/bin/assets --css --dir=css"
+    ]
   }
 }
