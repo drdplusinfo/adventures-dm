@@ -2435,12 +2435,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/jaroslavtyc/drd-plus-frontend-skeleton.git",
-            "reference": "204ec181d8e7f1922dc67865be913c51809be650"
+            "reference": "c471b470807b08419f59d51657e85a9f694160e2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/204ec181d8e7f1922dc67865be913c51809be650",
-            "reference": "204ec181d8e7f1922dc67865be913c51809be650",
+            "url": "https://api.github.com/repos/jaroslavtyc/drd-plus-frontend-skeleton/zipball/c471b470807b08419f59d51657e85a9f694160e2",
+            "reference": "c471b470807b08419f59d51657e85a9f694160e2",
             "shasum": ""
         },
         "require": {
@@ -2458,7 +2458,7 @@
             "phpunit/phpunit": "~7.0",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-07-16 14:44:58",
+        "time": "2018-07-16 14:58:09",
         "bin": [
             "bin/assets"
         ],
