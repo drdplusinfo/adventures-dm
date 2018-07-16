@@ -2,7 +2,7 @@
 $documentRoot = $documentRoot ?? (PHP_SAPI !== 'cli' ? \rtrim(\dirname($_SERVER['SCRIPT_FILENAME']), '\/') : \getcwd());
 
 /** @noinspection PhpIncludeInspection */
-require_once $documentRoot . '/vendor/autoload.php';
+require_once $documentRoot . '/vendor/drd-plus/rules-skeleton/parts/rules-skeleton/safe_autoload.php';
 
 $controller = $controller ?? new \DrdPlus\RulesSkeleton\RulesController(
         'UA-121206931-3',
