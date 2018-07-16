@@ -14,4 +14,3 @@ $testsConfiguration->setBlockNamesToExpectedContent([]);
 $testsConfiguration->setExpectedWebName('DrD+ dobrodružství');
 $testsConfiguration->setExpectedPageTitle('💥 DrD+ dobrodružství');
 $testsConfiguration->setExpectedGoogleAnalyticsId('UA-121206931-3');
-$testsConfiguration->disableHasMoreVersions();
