@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace DrdPlus\Tests\FrontendSkeleton;
 
+use DrdPlus\FrontendSkeleton\Dirs;
 use DrdPlus\FrontendSkeleton\HtmlDocument;
 use DrdPlus\FrontendSkeleton\WebVersions;
 use DrdPlus\Tests\FrontendSkeleton\Partials\AbstractContentTest;
+use Gt\Dom\Element;
 
 class VersionTest extends AbstractContentTest
 {
@@ -48,7 +50,8 @@ class VersionTest extends AbstractContentTest
      */
     public function I_can_switch_to_every_version(string $source): void
     {
-        $webVersions = new WebVersions($this->getDocumentRoot());
+        $dirs = new Dirs($this->getMasterDocumentRoot(), $this->getDocumentRoot());
+        $webVersions = new WebVersions($dirs);
         foreach ($webVersions->getAllVersions() as $webVersion) {
             $post = [];
             $cookies = [];
@@ -92,7 +95,8 @@ class VersionTest extends AbstractContentTest
 
             return;
         }
-        $webVersions = new WebVersions($this->getDocumentRoot());
+        $dirs = new Dirs($this->getMasterDocumentRoot(), $this->getDocumentRoot());
+        $webVersions = new WebVersions($dirs);
         $tags = $this->runCommand('git tag | grep -P "([[:digit:]]+[.]){2}[[:alnum:]]+([.][[:digit:]]+)?" --only-matching');
         self::assertNotEmpty(
             $tags,
@@ -120,5 +124,45 @@ class VersionTest extends AbstractContentTest
         self::assertArrayHasKey('version', $_COOKIE, "Missing 'version' in cookie");
         // unstable version is forced by test, it should be stable version by default
         self::assertSame($this->getTestsConfiguration()->getExpectedLastUnstableVersion(), $_COOKIE['version']);
+    }
+
+    /**
+     * @test
+     */
+    public function Stable_versions_have_valid_asset_links(): void
+    {
+        if (!$this->isSkeletonChecked() && !$this->getTestsConfiguration()->hasMoreVersions()) {
+            self::assertFalse(false, 'Nothing to test here');
+
+            return;
+        }
+        $dirs = new Dirs($this->getMasterDocumentRoot(), $this->getDocumentRoot());
+        $webVersions = new WebVersions($dirs);
+        $masterDocumentRoot = $dirs->getMasterDocumentRoot();
+        $checked = 0;
+        foreach ($webVersions->getAllStableVersions() as $stableVersion) {
+            $htmlDocument = $this->getHtmlDocument(['version' => $stableVersion]);
+            foreach ($htmlDocument->getElementsByTagName('img') as $image) {
+                $checked += $this->Asset_file_exists($image, 'src', $masterDocumentRoot);
+            }
+            foreach ($htmlDocument->getElementsByTagName('link') as $link) {
+                $checked += $this->Asset_file_exists($link, 'href', $masterDocumentRoot);
+            }
+            foreach ($htmlDocument->getElementsByTagName('script') as $script) {
+                $checked += $this->Asset_file_exists($script, 'src', $masterDocumentRoot);
+            }
+        }
+    }
+
+    private function Asset_file_exists(Element $element, string $parameterName, string $masterDocumentRoot): int
+    {
+        $urlParts = \parse_url($element->getAttribute($parameterName));
+        if (!empty($urlParts['host'])) {
+            return 0;
+        }
+        $path = $urlParts['path'];
+        self::assertFileExists($masterDocumentRoot . '/' . \ltrim($path, '/'), $element->outerHTML);
+
+        return 1;
     }
 }

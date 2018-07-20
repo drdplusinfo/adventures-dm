@@ -3,6 +3,7 @@ namespace DrdPlus\RulesSkeleton;
 
 use DeviceDetector\Parser\Bot;
 use DrdPlus\FrontendSkeleton\CookiesService;
+use DrdPlus\FrontendSkeleton\PageCache;
 use Granam\String\StringTools;
 
 /**
@@ -22,14 +23,23 @@ class RulesController extends \DrdPlus\FrontendSkeleton\FrontendController
     /** @var bool */
     private $freeAccess = false;
 
-    public function __construct(
-        string $googleAnalyticsId,
-        HtmlHelper $htmlHelper,
-        Dirs $dirs,
-        array $bodyClasses = []
-    )
+    public function __construct(string $googleAnalyticsId, HtmlHelper $htmlHelper, Dirs $dirs, array $bodyClasses = [])
     {
         parent::__construct($googleAnalyticsId, $htmlHelper, $dirs, $bodyClasses);
+    }
+
+    public function getPageCache(): PageCache
+    {
+        if ($this->pageCache === null) {
+            $this->pageCache = new PageCache(
+                $this->getWebVersions(),
+                $this->getDirs(),
+                $this->getHtmlHelper()->isInProduction(),
+                \basename($this->getDirs()->getWebRoot()) // can vary in relation to pass
+            );
+        }
+
+        return $this->pageCache;
     }
 
     public function setFreeAccess(): RulesController

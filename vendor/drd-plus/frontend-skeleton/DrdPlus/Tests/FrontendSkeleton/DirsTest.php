@@ -16,7 +16,7 @@ class DirsTest extends AbstractContentTest
     {
         $dirsClass = static::getSutClass();
         /** @var Dirs $dirs */
-        $dirs = new $dirsClass();
+        $dirs = new $dirsClass($this->getMasterDocumentRoot(), $this->getDocumentRoot());
         self::assertSame(\realpath($this->getDocumentRoot()), \realpath($dirs->getDocumentRoot()));
         self::assertSame(\realpath($this->getWebRoot()), \realpath($dirs->getWebRoot()));
         self::assertSame(\realpath($this->getVendorRoot()), \realpath($dirs->getVendorRoot()));
@@ -44,12 +44,24 @@ class DirsTest extends AbstractContentTest
     {
         $dirsClass = static::getSutClass();
         /** @var Dirs $dirs */
-        $dirs = new $dirsClass('foo');
-        self::assertSame('foo', $dirs->getDocumentRoot());
-        self::assertSame('foo/web', $dirs->getWebRoot());
-        self::assertSame('foo/vendor', $dirs->getVendorRoot());
-        self::assertSame('foo/parts', $dirs->getPartsRoot());
+        $dirs = new $dirsClass('foo', 'bar');
+        self::assertSame('foo', $dirs->getMasterDocumentRoot());
+        self::assertSame('bar', $dirs->getDocumentRoot());
+        self::assertSame('bar/web', $dirs->getWebRoot());
+        self::assertSame('bar/vendor', $dirs->getVendorRoot());
+        self::assertSame('bar/parts', $dirs->getPartsRoot());
         self::assertSame($this->getGenericPartsRoot(), $dirs->getGenericPartsRoot());
-        self::assertSame('foo/versions', $dirs->getDirForVersions());
+        self::assertSame('bar/versions', $dirs->getDirForVersions());
+    }
+
+    /**
+     * @test
+     */
+    public function _I_can_get_cache_root(): void
+    {
+        $dirsClass = static::getSutClass();
+        /** @var Dirs $dirs */
+        $dirs = new $dirsClass('foo', 'bar');
+        self::assertSame('bar/cache/' . \PHP_SAPI, $dirs->getCacheRoot());
     }
 }

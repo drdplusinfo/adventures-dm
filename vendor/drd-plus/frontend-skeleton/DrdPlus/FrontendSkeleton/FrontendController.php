@@ -32,7 +32,7 @@ class FrontendController extends StrictObject
     /** @var bool */
     private $showHomeButton = true;
     /** @var PageCache */
-    private $pageCache;
+    protected $pageCache;
     /** @var Redirect|null */
     private $redirect;
 
@@ -66,6 +66,14 @@ class FrontendController extends StrictObject
     public function getDirs(): Dirs
     {
         return $this->dirs;
+    }
+
+    /**
+     * @return HtmlHelper
+     */
+    public function getHtmlHelper(): HtmlHelper
+    {
+        return $this->htmlHelper;
     }
 
     /**

@@ -7,14 +7,9 @@ namespace DrdPlus\RulesSkeleton;
 
 class Dirs extends \DrdPlus\FrontendSkeleton\Dirs
 {
-    public function __construct(string $documentRoot = null)
+    protected function populateSubRoots(string $masterDocumentRoot, string $documentRoot): void
     {
-        parent::__construct($documentRoot);
-    }
-
-    protected function populateSubRoots(string $documentRoot): void
-    {
-        parent::populateSubRoots($documentRoot);
+        parent::populateSubRoots($masterDocumentRoot, $documentRoot);
         $this->setWebRoot($this->getDocumentRoot() . '/web/passed');
         $this->genericPartsRoot = __DIR__ . '/../../parts/rules-skeleton';
     }
