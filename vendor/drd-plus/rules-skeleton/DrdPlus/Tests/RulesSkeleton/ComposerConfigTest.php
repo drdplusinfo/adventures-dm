@@ -22,19 +22,24 @@ class ComposerConfigTest extends \DrdPlus\Tests\FrontendSkeleton\ComposerConfigT
     /**
      * @test
      */
-    public function Frontend_cache_is_warmed_up_after_libraries_installation(): void
+    public function Libraries_git_dirs_are_removed(): void
     {
-        $postInstallScripts = static::$composerConfig['scripts']['post-install-cmd'] ?? [];
-        self::assertNotEmpty($postInstallScripts, 'Missing post-install-cmd scripts');
-        $cacheWarmUpScript = 'wget ' . $this->getTestsConfiguration()->getPublicUrl()
-            . ($this->getTestsConfiguration()->hasProtectedAccess() ? ' --post-data="trial=1"' : '')
-            . ' --background --output-document=- --output-file=/dev/null >> /dev/null';
-        self::assertContains(
-            $cacheWarmUpScript,
-            $postInstallScripts,
-            'Missing script to warm up frontend cache, there are configs '
-            . \preg_replace('~^Array\n\((.+)\)~', '$1', \var_export($postInstallScripts, true))
-        );
+        $preAutoloadDumpScripts = static::$composerConfig['scripts']['pre-autoload-dump'] ?? [];
+        self::assertNotEmpty($preAutoloadDumpScripts, 'Missing pre-autoload-dump scripts');
+        if ($this->isSkeletonChecked()) {
+            self::assertNotContains(
+                'find ./vendor -type d -name .git -exec rm -fr {} +',
+                $preAutoloadDumpScripts,
+                'There is no reason to remove vendors .git dir in skeleton as vendor dir is not versioned'
+            );
+        } else {
+            self::assertContains(
+                'find ./vendor -type d -name .git -exec rm -fr {} +',
+                $preAutoloadDumpScripts,
+                'Missing vendors .git dir removal, there are configs '
+                . \preg_replace('~^Array\n\((.+)\)~', '$1', \var_export($preAutoloadDumpScripts, true))
+            );
+        }
     }
 
     /**

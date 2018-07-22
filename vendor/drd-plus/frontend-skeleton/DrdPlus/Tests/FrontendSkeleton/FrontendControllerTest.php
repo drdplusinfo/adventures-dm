@@ -188,11 +188,11 @@ class FrontendControllerTest extends AbstractContentTest
     {
         $controllerClass = static::getSutClass();
         /** @var FrontendController $controller */
-        $controller = new $controllerClass('Google Analytics Foo', $this->createHtmlHelper(true /* in production */), $this->createDirs());
+        $controller = new $controllerClass('Google Analytics Foo', $this->createHtmlHelper(null, true /* in production */), $this->createDirs());
         self::assertTrue($controller->getPageCache()->isInProduction(), 'Expected page cache to be in production mode');
         $controllerClass = static::getSutClass();
         /** @var FrontendController $controller */
-        $controller = new $controllerClass('Google Analytics Foo', $this->createHtmlHelper(false /* not in production */), $this->createDirs());
+        $controller = new $controllerClass('Google Analytics Foo', $this->createHtmlHelper(null, false /* not in production */), $this->createDirs());
         self::assertFalse($controller->getPageCache()->isInProduction(), 'Expected page cache to be not in production mode');
     }
 
@@ -232,29 +232,13 @@ class FrontendControllerTest extends AbstractContentTest
     ): FrontendController
     {
         $controllerClass = static::getSutClass();
+        $dirs = $this->createDirs($documentRoot);
 
         return new $controllerClass(
             $googleAnalyticsId,
-            $htmlHelper ?? $this->createHtmlHelper(false /* not in production */),
-            $this->createDirs($documentRoot)
+            $htmlHelper ?? $this->createHtmlHelper($dirs, false, false, false, false),
+            $dirs
         );
-    }
-
-    /**
-     * @param HtmlDocument $document
-     * @return array|Element[]
-     */
-    protected function getMetaRefreshes(HtmlDocument $document): array
-    {
-        $metaElements = $document->head->getElementsByTagName('meta');
-        $metaRefreshes = [];
-        foreach ($metaElements as $metaElement) {
-            if ($metaElement->getAttribute('http-equiv') === 'Refresh') {
-                $metaRefreshes[] = $metaElement;
-            }
-        }
-
-        return $metaRefreshes;
     }
 
     /**
