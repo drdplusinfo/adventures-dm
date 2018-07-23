@@ -15,7 +15,7 @@
   },
   "require": {
     "php": ">=7.1",
-    "drd-plus/rules-skeleton": "dev-master"
+    "drd-plus/rules-skeleton": "~1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
@@ -27,13 +27,12 @@
   "scripts": {
     "pre-autoload-dump": [
       "rm -f DrdPlus/Tests/RulesSkeleton && ln -s ../../vendor/drd-plus/rules-skeleton/DrdPlus/Tests/RulesSkeleton ./DrdPlus/Tests/",
-      "rm -fr ./css/generic && cp -r ./vendor/drd-plus/rules-skeleton/css/generic ./css/generic",
-      "rm -fr ./images/generic && cp -r ./vendor/drd-plus/rules-skeleton/images/generic ./images/generic",
-      "rm -fr ./js/generic && cp -r ./vendor/drd-plus/rules-skeleton/js/generic ./js/generic",
+      "rm -fr ./css/generic && cp -r ./vendor/drd-plus/rules-skeleton/css/generic ./css/",
+      "rm -fr ./images/generic && cp -r ./vendor/drd-plus/rules-skeleton/images/generic ./images/",
+      "rm -fr ./js/generic && cp -r ./vendor/drd-plus/rules-skeleton/js/generic ./js/",
       "find ./cache -mindepth 2 -type f -exec rm {} +",
       "cp ./vendor/drd-plus/rules-skeleton/google8d8724e0c2818dfc.html .",
-      "cp ./vendor/drd-plus/rules-skeleton/phpunit.xml.dist .",
-      "find ./vendor -type d -name .git -exec rm -fr {} +"
+      "cp ./vendor/drd-plus/rules-skeleton/phpunit.xml.dist ."
     ],
     "post-update-cmd": [
       "php ./vendor/bin/assets --css --dir=css"

@@ -13,7 +13,7 @@ return array(
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Gt\\Dom\\' => array($vendorDir . '/phpgt/dom/src'),
     'Granam\\' => array($vendorDir . '/granam/strict-object/Granam', $vendorDir . '/granam/scalar/Granam', $vendorDir . '/granam/string/Granam', $vendorDir . '/granam/exceptions-hierarchy/Granam', $vendorDir . '/granam/tools/Granam'),
-    'DrdPlus\\' => array($baseDir . '/DrdPlus', $vendorDir . '/drd-plus/rules-skeleton/DrdPlus', $vendorDir . '/drd-plus/frontend-skeleton/DrdPlus'),
+    'DrdPlus\\' => array($baseDir . '/DrdPlus', $vendorDir . '/drd-plus/frontend-skeleton/DrdPlus', $vendorDir . '/drd-plus/rules-skeleton/DrdPlus'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeviceDetector\\' => array($vendorDir . '/piwik/device-detector'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
