@@ -1,6 +1,6 @@
 <?php
 global $testsConfiguration;
-$testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration('http://dobrodruzstvi.ppj.drdplus.loc', 'https://dobrodruzstvi.ppj.drdplus.info');
+$testsConfiguration = new \DrdPlus\Tests\RulesSkeleton\TestsConfiguration('https://dobrodruzstvi.ppj.drdplus.info');
 $testsConfiguration->disableHasProtectedAccess();
 $testsConfiguration->disableHasAuthors();
 $testsConfiguration->disableCanBeBoughtOnEshop();
