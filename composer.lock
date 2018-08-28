@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "drdplus/frontend-skeleton",
-            "version": "1.0.49",
+            "version": "1.0.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/drdplus-frontend-skeleton.git",
-                "reference": "bb855f477d2bea4632aab76d8a36be3c8380c000"
+                "reference": "6462152804b3bb34a6ee04226c00ebbea0362961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/drdplus-frontend-skeleton/zipball/bb855f477d2bea4632aab76d8a36be3c8380c000",
-                "reference": "bb855f477d2bea4632aab76d8a36be3c8380c000",
+                "url": "https://api.github.com/repos/drdplusinfo/drdplus-frontend-skeleton/zipball/6462152804b3bb34a6ee04226c00ebbea0362961",
+                "reference": "6462152804b3bb34a6ee04226c00ebbea0362961",
                 "shasum": ""
             },
             "require": {
@@ -71,20 +71,20 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-08-28 09:08:29"
+            "time": "2018-08-28 10:55:06"
         },
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.0.30",
+            "version": "1.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/drdplus-rules-skeleton.git",
-                "reference": "de77ffa91366564952d24814a28693e4543e4164"
+                "reference": "4bc65b282af4c6372073426f42e7a71c72cb23bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/drdplus-rules-skeleton/zipball/de77ffa91366564952d24814a28693e4543e4164",
-                "reference": "de77ffa91366564952d24814a28693e4543e4164",
+                "url": "https://api.github.com/repos/drdplusinfo/drdplus-rules-skeleton/zipball/4bc65b282af4c6372073426f42e7a71c72cb23bc",
+                "reference": "4bc65b282af4c6372073426f42e7a71c72cb23bc",
                 "shasum": ""
             },
             "require": {
@@ -124,7 +124,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-08-28 10:12:39"
+            "time": "2018-08-28 10:29:52"
         },
         {
             "name": "erusev/parsedown",
