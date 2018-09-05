@@ -2536,12 +2536,12 @@
     },
     {
         "name": "drdplus/rules-skeleton",
-        "version": "1.0.38",
-        "version_normalized": "1.0.38.0",
+        "version": "1.0.39",
+        "version_normalized": "1.0.39.0",
         "source": {
             "type": "git",
             "url": "/home/jaroslav/projects/drdplus/rules/rules-skeleton",
-            "reference": "d7571131215358564698b5bf3bd57fb990f32144"
+            "reference": "ff6a5e2b5ec743a27a2b45b348f0d726346a4003"
         },
         "require": {
             "composer-plugin-api": "^1.0",
@@ -2560,7 +2560,7 @@
             "phpunit/phpunit": "~7.0",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-09-05 06:45:47",
+        "time": "2018-09-05 07:27:51",
         "type": "composer-plugin",
         "extra": {
             "class": "DrdPlus\\RulesSkeleton\\SkeletonInjectorComposerPlugin"

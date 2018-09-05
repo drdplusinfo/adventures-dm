@@ -8,6 +8,7 @@ $testsConfiguration->disableHasTables();
 $testsConfiguration->disableHasLinksToJournals();
 $testsConfiguration->disableHasLinkToSingleJournal();
 $testsConfiguration->disableHasDebugContacts();
+$testsConfiguration->disableHasMoreVersions();
 $testsConfiguration->disableHasCustomBodyContent();
 $testsConfiguration->setSomeExpectedTableIds([]);
 $testsConfiguration->setBlockNamesToExpectedContent([]);

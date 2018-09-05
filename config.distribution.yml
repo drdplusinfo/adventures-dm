@@ -1,5 +1,5 @@
 web:
-  last_stable_version: '1.0'
+  last_stable_version: 'master'
   repository_url: git@bitbucket.org:drdplusinfo/adventures-dm-web.git
   protected_access: false
   eshop_url: https://obchod.altar.cz/draci-doupe-a-jine-rpg-hry-draci-doupe-plus-c-1_7.html
