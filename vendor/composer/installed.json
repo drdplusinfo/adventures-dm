@@ -974,74 +974,6 @@
         ]
     },
     {
-        "name": "drdplus/frontend-skeleton",
-        "version": "1.0.77",
-        "version_normalized": "1.0.77.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
-            "reference": "dde568d7741fcab0da5a5b3a01c72dd4934d6cb2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/dde568d7741fcab0da5a5b3a01c72dd4934d6cb2",
-            "reference": "dde568d7741fcab0da5a5b3a01c72dd4934d6cb2",
-            "shasum": ""
-        },
-        "require": {
-            "composer-plugin-api": "^1.0",
-            "erusev/parsedown": "^1.7",
-            "ext-curl": "*",
-            "ext-dom": "*",
-            "ext-json": "*",
-            "ext-mbstring": "*",
-            "ext-posix": "*",
-            "ext-yaml": "*",
-            "ext-zlib": "*",
-            "granam/exceptions-hierarchy": "^4.0",
-            "granam/string": "^3.1",
-            "php": ">=7.1",
-            "phpgt/dom": "~1.0",
-            "phpmailer/phpmailer": "^6.0",
-            "piwik/device-detector": "^3.9",
-            "tracy/tracy": "^2.4"
-        },
-        "require-dev": {
-            "composer/composer": "^1.7",
-            "mockery/mockery": "~1.0",
-            "phpunit/phpunit": "~7.0",
-            "roave/security-advisories": "dev-master"
-        },
-        "time": "2018-09-05 10:13:10",
-        "bin": [
-            "bin/assets"
-        ],
-        "type": "composer-plugin",
-        "extra": {
-            "class": "DrdPlus\\FrontendSkeleton\\SkeletonInjectorComposerPlugin"
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "DrdPlus\\": "DrdPlus/",
-                "Tests\\": "Tests/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Skeleton for DrD+ pages",
-        "keywords": [
-            "Skeleton",
-            "drd plus",
-            "frontend",
-            "helper",
-            "pages",
-            "view"
-        ]
-    },
-    {
         "name": "drdplus/rules-skeleton",
         "version": "1.0.41",
         "version_normalized": "1.0.41.0",
@@ -2587,6 +2519,74 @@
             "drd plus",
             "helper",
             "rules"
+        ]
+    },
+    {
+        "name": "drdplus/frontend-skeleton",
+        "version": "1.0.78",
+        "version_normalized": "1.0.78.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
+            "reference": "ebae63107fa5c6ab19be3a352742d4d1edbc3f4d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/ebae63107fa5c6ab19be3a352742d4d1edbc3f4d",
+            "reference": "ebae63107fa5c6ab19be3a352742d4d1edbc3f4d",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0",
+            "erusev/parsedown": "^1.7",
+            "ext-curl": "*",
+            "ext-dom": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "ext-posix": "*",
+            "ext-yaml": "*",
+            "ext-zlib": "*",
+            "granam/exceptions-hierarchy": "^4.0",
+            "granam/string": "^3.1",
+            "php": ">=7.1",
+            "phpgt/dom": "~1.0",
+            "phpmailer/phpmailer": "^6.0",
+            "piwik/device-detector": "^3.9",
+            "tracy/tracy": "^2.4"
+        },
+        "require-dev": {
+            "composer/composer": "^1.7",
+            "mockery/mockery": "~1.0",
+            "phpunit/phpunit": "~7.0",
+            "roave/security-advisories": "dev-master"
+        },
+        "time": "2018-09-05 11:08:22",
+        "bin": [
+            "bin/assets"
+        ],
+        "type": "composer-plugin",
+        "extra": {
+            "class": "DrdPlus\\FrontendSkeleton\\SkeletonInjectorComposerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DrdPlus\\": "DrdPlus/",
+                "Tests\\": "Tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Skeleton for DrD+ pages",
+        "keywords": [
+            "Skeleton",
+            "drd plus",
+            "frontend",
+            "helper",
+            "pages",
+            "view"
         ]
     }
 ]
