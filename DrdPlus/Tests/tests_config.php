@@ -8,6 +8,7 @@ $testsConfiguration->disableHasTables();
 $testsConfiguration->disableHasLinksToJournals();
 $testsConfiguration->disableHasLinkToSingleJournal();
 $testsConfiguration->disableHasDebugContacts();
+$testsConfiguration->setExpectedLastVersion('master');
 $testsConfiguration->disableHasMoreVersions();
 $testsConfiguration->disableHasCustomBodyContent();
 $testsConfiguration->setSomeExpectedTableIds([]);
