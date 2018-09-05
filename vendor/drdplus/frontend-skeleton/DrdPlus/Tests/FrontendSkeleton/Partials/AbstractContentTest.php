@@ -8,7 +8,8 @@ use DrdPlus\FrontendSkeleton\Configuration;
 use DrdPlus\FrontendSkeleton\Dirs;
 use DrdPlus\FrontendSkeleton\FrontendController;
 use DrdPlus\FrontendSkeleton\HtmlHelper;
-use DrdPlus\FrontendSkeleton\Partials\CurrentMinorVersionProvider;
+use DrdPlus\FrontendSkeleton\Request;
+use DrdPlus\FrontendSkeleton\ServicesContainer;
 use Gt\Dom\Element;
 use Gt\Dom\HTMLDocument;
 use Mockery\MockInterface;
@@ -151,30 +152,21 @@ abstract class AbstractContentTest extends SkeletonTestCase
         return $titles->current()->nodeValue;
     }
 
-    protected function getDefinedPageTitle(): string
-    {
-        $dirs = $this->createDirs();
-
-        return (new FrontendController($this->createConfiguration($dirs), $this->createHtmlHelper($dirs)))->getPageTitle();
-    }
-
     /**
      * @param Dirs $dirs
      * @param bool $inDevMode
      * @param bool $inForcedProductionMode
      * @param bool $shouldHideCovered
-     * @param bool $showIntroductionOnly
      * @return HtmlHelper|\Mockery\MockInterface
      */
     protected function createHtmlHelper(
         Dirs $dirs = null,
         bool $inForcedProductionMode = false,
         bool $inDevMode = false,
-        bool $shouldHideCovered = false,
-        bool $showIntroductionOnly = false
+        bool $shouldHideCovered = false
     ): HtmlHelper
     {
-        return new HtmlHelper($dirs ?? $this->createDirs(), $inDevMode, $inForcedProductionMode, $shouldHideCovered, $showIntroductionOnly);
+        return new HtmlHelper($dirs ?? $this->createDirs(), $inDevMode, $inForcedProductionMode, $shouldHideCovered);
     }
 
     protected function fetchNonCachedContent(FrontendController $controller = null, bool $backupGlobals = true): string
@@ -290,14 +282,15 @@ abstract class AbstractContentTest extends SkeletonTestCase
         return Configuration::createFromYml($dirs ?? $this->createDirs());
     }
 
-    protected function createCurrentVersionProvider(string $currentVersion = null): CurrentMinorVersionProvider
+    protected function createRequest(string $currentVersion = null): Request
     {
-        $currentVersionProvider = $this->mockery(CurrentMinorVersionProvider::class);
-        $currentVersionProvider->allows('getCurrentMinorVersion')
-            ->andReturn($currentVersion ?? $this->getTestsConfiguration()->getExpectedLastVersion());
+        $request = $this->mockery(Request::class);
+        $request->allows('getValue')
+            ->with(Request::VERSION)
+            ->andReturn($currentVersion);
 
-        /** @var CurrentMinorVersionProvider $currentVersionProvider */
-        return $currentVersionProvider;
+        /** @var Request $request */
+        return $request;
     }
 
     /**
@@ -314,5 +307,35 @@ abstract class AbstractContentTest extends SkeletonTestCase
         );
 
         return $customConfiguration;
+    }
+
+    protected function createController(
+        string $documentRoot = null,
+        Configuration $configuration = null,
+        HtmlHelper $htmlHelper = null
+    ): FrontendController
+    {
+        $controllerClass = $this->getControllerClass();
+
+        return new $controllerClass($this->createServicesContainer($documentRoot, $configuration, $htmlHelper));
+    }
+
+    protected function getControllerClass(): string
+    {
+        return FrontendController::class;
+    }
+
+    protected function createServicesContainer(
+        string $documentRoot = null,
+        Configuration $configuration = null,
+        HtmlHelper $htmlHelper = null
+    ): ServicesContainer
+    {
+        $dirs = $this->createDirs($documentRoot);
+
+        return new ServicesContainer(
+            $configuration ?? $this->createConfiguration(),
+            $htmlHelper ?? $this->createHtmlHelper($dirs, false, false, false, false)
+        );
     }
 }

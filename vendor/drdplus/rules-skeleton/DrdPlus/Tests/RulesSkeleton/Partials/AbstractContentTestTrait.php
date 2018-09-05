@@ -8,6 +8,8 @@ use DrdPlus\RulesSkeleton\Configuration;
 use DrdPlus\FrontendSkeleton\Dirs;
 use DrdPlus\RulesSkeleton\HtmlHelper;
 use DrdPlus\RulesSkeleton\Request;
+use DrdPlus\RulesSkeleton\RulesController;
+use DrdPlus\RulesSkeleton\ServicesContainer;
 use DrdPlus\RulesSkeleton\UsagePolicy;
 use Granam\String\StringTools;
 use Gt\Dom\HTMLDocument;
@@ -21,6 +23,7 @@ use Gt\Dom\HTMLDocument;
  * @method static assertFalse($value, $message = '')
  * @method static assertNotSame($expected, $actual, $message = '')
  * @method static fail($message)
+ * @method RulesController createController(string $documentRoot = null, Configuration $configuration = null, HtmlHelper $htmlHelper = null)
  */
 trait AbstractContentTestTrait
 {
@@ -234,18 +237,16 @@ trait AbstractContentTestTrait
      * @param bool $inDevMode
      * @param bool $inForcedProductionMode
      * @param bool $shouldHideCovered
-     * @param bool $showIntroductionOnly
      * @return HtmlHelper|\Mockery\MockInterface
      */
     protected function createHtmlHelper(
         Dirs $dirs = null,
         bool $inForcedProductionMode = false,
         bool $inDevMode = false,
-        bool $shouldHideCovered = false,
-        bool $showIntroductionOnly = false
+        bool $shouldHideCovered = false
     ): \DrdPlus\FrontendSkeleton\HtmlHelper
     {
-        return new HtmlHelper($dirs ?? $this->createDirs(), $inDevMode, $inForcedProductionMode, $shouldHideCovered, $showIntroductionOnly);
+        return new HtmlHelper($dirs ?? $this->createDirs(), $inDevMode, $inForcedProductionMode, $shouldHideCovered);
     }
 
     /**
@@ -259,5 +260,30 @@ trait AbstractContentTestTrait
         }
 
         return \DrdPlus\FrontendSkeleton\Configuration::createFromYml($dirs ?? $this->createDirs());
+    }
+
+    /**
+     * @param string|null $documentRoot
+     * @param \DrdPlus\FrontendSkeleton\Configuration|null $configuration
+     * @param \DrdPlus\FrontendSkeleton\HtmlHelper|null $htmlHelper
+     * @return \DrdPlus\FrontendSkeleton\ServicesContainer|ServicesContainer
+     */
+    protected function createServicesContainer(
+        string $documentRoot = null,
+        \DrdPlus\FrontendSkeleton\Configuration $configuration = null,
+        \DrdPlus\FrontendSkeleton\HtmlHelper $htmlHelper = null
+    ): \DrdPlus\FrontendSkeleton\ServicesContainer
+    {
+        $dirs = $this->createDirs($documentRoot);
+
+        return new ServicesContainer(
+            $configuration ?? $this->createConfiguration(),
+            $htmlHelper ?? $this->createHtmlHelper($dirs, false, false, false, false)
+        );
+    }
+
+    protected function getControllerClass(): string
+    {
+        return RulesController::class;
     }
 }

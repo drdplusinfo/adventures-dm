@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46438bf78b9ba3bb9fe836ffd334e909",
-    "content-hash": "1544d14949ff5496f1de430040dabb34",
+    "hash": "4b0846b5ddb282a98a5c51255675eb69",
+    "content-hash": "ffc0c5958c5f6408df17bfc604a11d5d",
     "packages": [
         {
             "name": "drdplus/frontend-skeleton",
-            "version": "1.0.54",
+            "version": "1.0.72",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drdplusinfo/drdplus-frontend-skeleton.git",
-                "reference": "be60cfb470abc1672add01d4cacbaa0131f7b43c"
+                "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
+                "reference": "7a02786905921bc522b9c6e1cc8cb09d64a79235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/drdplus-frontend-skeleton/zipball/be60cfb470abc1672add01d4cacbaa0131f7b43c",
-                "reference": "be60cfb470abc1672add01d4cacbaa0131f7b43c",
+                "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/7a02786905921bc522b9c6e1cc8cb09d64a79235",
+                "reference": "7a02786905921bc522b9c6e1cc8cb09d64a79235",
                 "shasum": ""
             },
             "require": {
@@ -71,21 +71,15 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-08-30 10:20:41"
+            "time": "2018-09-04 19:02:56"
         },
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.0.33",
+            "version": "1.0.38",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drdplusinfo/drdplus-rules-skeleton.git",
-                "reference": "9b7a3b59bc4135358486ff00f992149f1ba31031"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/drdplus-rules-skeleton/zipball/9b7a3b59bc4135358486ff00f992149f1ba31031",
-                "reference": "9b7a3b59bc4135358486ff00f992149f1ba31031",
-                "shasum": ""
+                "url": "/home/jaroslav/projects/drdplus/rules/rules-skeleton",
+                "reference": "d7571131215358564698b5bf3bd57fb990f32144"
             },
             "require": {
                 "composer-plugin-api": "^1.0",
@@ -113,18 +107,17 @@
                     "DrdPlus\\": "DrdPlus/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Skeleton for DrD+ rules as HTML",
             "keywords": [
-                "Skeleton",
                 "drd plus",
                 "helper",
-                "rules"
+                "rules",
+                "skeleton"
             ],
-            "time": "2018-08-30 10:31:22"
+            "time": "2018-09-05 06:45:47"
         },
         {
             "name": "erusev/parsedown",
@@ -1603,16 +1596,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.3.2",
+            "version": "7.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "34705f81bddc3f505b9599a2ef96e2b4315ba9b8"
+                "reference": "1bd5629cccfb2c0a9ef5474b4ff772349e1ec898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/34705f81bddc3f505b9599a2ef96e2b4315ba9b8",
-                "reference": "34705f81bddc3f505b9599a2ef96e2b4315ba9b8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1bd5629cccfb2c0a9ef5474b4ff772349e1ec898",
+                "reference": "1bd5629cccfb2c0a9ef5474b4ff772349e1ec898",
                 "shasum": ""
             },
             "require": {
@@ -1683,7 +1676,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-08-22 06:39:21"
+            "time": "2018-09-01 15:49:55"
         },
         {
             "name": "roave/security-advisories",
