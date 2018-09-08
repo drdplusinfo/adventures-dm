@@ -974,61 +974,6 @@
         ]
     },
     {
-        "name": "drdplus/rules-skeleton",
-        "version": "1.0.41",
-        "version_normalized": "1.0.41.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-            "reference": "153b44cd3e0d3598eb2d7789a60dc65ddc306570"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/153b44cd3e0d3598eb2d7789a60dc65ddc306570",
-            "reference": "153b44cd3e0d3598eb2d7789a60dc65ddc306570",
-            "shasum": ""
-        },
-        "require": {
-            "composer-plugin-api": "^1.0",
-            "drdplus/frontend-skeleton": "~1.0",
-            "ext-mbstring": "*",
-            "php": ">=7.1",
-            "phpgt/dom": "~1.0",
-            "phpmailer/phpmailer": "^6.0",
-            "piwik/device-detector": "^3.9",
-            "tracy/tracy": "^2.4"
-        },
-        "require-dev": {
-            "composer/composer": "^1.7",
-            "drdplus/rules-skeleton-web": "dev-master",
-            "mockery/mockery": "~1.0",
-            "phpunit/phpunit": "~7.0",
-            "roave/security-advisories": "dev-master"
-        },
-        "time": "2018-09-05 10:22:28",
-        "type": "composer-plugin",
-        "extra": {
-            "class": "DrdPlus\\RulesSkeleton\\SkeletonInjectorComposerPlugin"
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "DrdPlus\\": "DrdPlus/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Skeleton for DrD+ rules as HTML",
-        "keywords": [
-            "Skeleton",
-            "drd plus",
-            "helper",
-            "rules"
-        ]
-    },
-    {
         "name": "sebastian/version",
         "version": "2.0.1",
         "version_normalized": "2.0.1.0",
@@ -2523,17 +2468,17 @@
     },
     {
         "name": "drdplus/frontend-skeleton",
-        "version": "1.0.78",
-        "version_normalized": "1.0.78.0",
+        "version": "1.0.84",
+        "version_normalized": "1.0.84.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
-            "reference": "ebae63107fa5c6ab19be3a352742d4d1edbc3f4d"
+            "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/ebae63107fa5c6ab19be3a352742d4d1edbc3f4d",
-            "reference": "ebae63107fa5c6ab19be3a352742d4d1edbc3f4d",
+            "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/059d345194f54bb4407e8f3c0c86ab4089e9343c",
+            "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c",
             "shasum": ""
         },
         "require": {
@@ -2560,7 +2505,7 @@
             "phpunit/phpunit": "~7.0",
             "roave/security-advisories": "dev-master"
         },
-        "time": "2018-09-05 11:08:22",
+        "time": "2018-09-06 14:29:10",
         "bin": [
             "bin/assets"
         ],
@@ -2587,6 +2532,61 @@
             "helper",
             "pages",
             "view"
+        ]
+    },
+    {
+        "name": "drdplus/rules-skeleton",
+        "version": "1.0.42",
+        "version_normalized": "1.0.42.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drdplusinfo/rules-skeleton.git",
+            "reference": "6da792734043a0260e02f9b7c848a81b28683030"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/6da792734043a0260e02f9b7c848a81b28683030",
+            "reference": "6da792734043a0260e02f9b7c848a81b28683030",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.0",
+            "drdplus/frontend-skeleton": "~1.0",
+            "ext-mbstring": "*",
+            "php": ">=7.1",
+            "phpgt/dom": "~1.0",
+            "phpmailer/phpmailer": "^6.0",
+            "piwik/device-detector": "^3.9",
+            "tracy/tracy": "^2.4"
+        },
+        "require-dev": {
+            "composer/composer": "^1.7",
+            "drdplus/rules-skeleton-web": "dev-master",
+            "mockery/mockery": "~1.0",
+            "phpunit/phpunit": "~7.0",
+            "roave/security-advisories": "dev-master"
+        },
+        "time": "2018-09-06 08:48:40",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "DrdPlus\\RulesSkeleton\\SkeletonInjectorComposerPlugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DrdPlus\\": "DrdPlus/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Skeleton for DrD+ rules as HTML",
+        "keywords": [
+            "Skeleton",
+            "drd plus",
+            "helper",
+            "rules"
         ]
     }
 ]
