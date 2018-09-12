@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "drdplus/frontend-skeleton",
-            "version": "1.0.84",
+            "version": "1.0.89",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/frontend-skeleton.git",
-                "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c"
+                "reference": "3ef70f830b10422b85c6dc4f4242902e7d869970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/059d345194f54bb4407e8f3c0c86ab4089e9343c",
-                "reference": "059d345194f54bb4407e8f3c0c86ab4089e9343c",
+                "url": "https://api.github.com/repos/drdplusinfo/frontend-skeleton/zipball/3ef70f830b10422b85c6dc4f4242902e7d869970",
+                "reference": "3ef70f830b10422b85c6dc4f4242902e7d869970",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
                 "ext-yaml": "*",
                 "ext-zlib": "*",
                 "granam/exceptions-hierarchy": "^4.0",
-                "granam/string": "^3.1",
+                "granam/string": "^3.2",
                 "php": ">=7.1",
                 "phpgt/dom": "~1.0",
                 "phpmailer/phpmailer": "^6.0",
@@ -71,20 +71,20 @@
                 "pages",
                 "view"
             ],
-            "time": "2018-09-06 14:29:10"
+            "time": "2018-09-12 14:30:20"
         },
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.0.42",
+            "version": "1.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-                "reference": "6da792734043a0260e02f9b7c848a81b28683030"
+                "reference": "70e2faebe9f52c04b76ac22fa99f1bc0d955449a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/6da792734043a0260e02f9b7c848a81b28683030",
-                "reference": "6da792734043a0260e02f9b7c848a81b28683030",
+                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/70e2faebe9f52c04b76ac22fa99f1bc0d955449a",
+                "reference": "70e2faebe9f52c04b76ac22fa99f1bc0d955449a",
                 "shasum": ""
             },
             "require": {
@@ -124,7 +124,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2018-09-06 08:48:40"
+            "time": "2018-09-12 11:08:08"
         },
         {
             "name": "erusev/parsedown",
@@ -315,19 +315,21 @@
         },
         {
             "name": "granam/string",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jaroslavtyc/granam-string.git",
-                "reference": "1cebae4311a10029e9a1a94a668d871627b94143"
+                "url": "https://github.com/granam/granam-string.git",
+                "reference": "39d5caa02260757c8c0154ecda144a8bc699255e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaroslavtyc/granam-string/zipball/1cebae4311a10029e9a1a94a668d871627b94143",
-                "reference": "1cebae4311a10029e9a1a94a668d871627b94143",
+                "url": "https://api.github.com/repos/granam/granam-string/zipball/39d5caa02260757c8c0154ecda144a8bc699255e",
+                "reference": "39d5caa02260757c8c0154ecda144a8bc699255e",
                 "shasum": ""
             },
             "require": {
+                "ext-intl": "*",
+                "ext-mbstring": "*",
                 "granam/scalar": "^4.0",
                 "granam/strict-object": "^3.0",
                 "php": ">=7.1"
@@ -367,7 +369,7 @@
                 "php",
                 "string"
             ],
-            "time": "2018-07-31 07:12:46"
+            "time": "2018-09-08 10:07:08"
         },
         {
             "name": "granam/tools",
@@ -1603,16 +1605,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.3.4",
+            "version": "7.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
+                "reference": "7b331efabbb628c518c408fdfcaf571156775de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
-                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b331efabbb628c518c408fdfcaf571156775de2",
+                "reference": "7b331efabbb628c518c408fdfcaf571156775de2",
                 "shasum": ""
             },
             "require": {
@@ -1683,7 +1685,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-09-05 09:58:53"
+            "time": "2018-09-08 15:14:29"
         },
         {
             "name": "roave/security-advisories",
