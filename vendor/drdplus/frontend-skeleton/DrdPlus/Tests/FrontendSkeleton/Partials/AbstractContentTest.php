@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace DrdPlus\Tests\FrontendSkeleton\Partials;
 
 use DrdPlus\FrontendSkeleton\Configuration;
+use DrdPlus\FrontendSkeleton\CookiesService;
 use DrdPlus\FrontendSkeleton\Dirs;
 use DrdPlus\FrontendSkeleton\FrontendController;
 use DrdPlus\FrontendSkeleton\Git;
@@ -25,6 +26,7 @@ abstract class AbstractContentTest extends SkeletonTestCase
     protected $needPassOut = false;
     /** @var Configuration */
     private $configuration;
+    private $frontendSkeletonChecked;
 
     protected function setUp(): void
     {
@@ -55,13 +57,14 @@ abstract class AbstractContentTest extends SkeletonTestCase
             if ($cookies) {
                 $_COOKIE = \array_merge($_COOKIE, $cookies);
             }
+            if (empty($_GET[Request::VERSION]) && empty($_COOKIE[CookiesService::VERSION])) {
+                $_GET[Request::VERSION] = $this->getTestsConfiguration()->getExpectedLastUnstableVersion();
+            }
             if ($this->needPassIn()) {
                 $this->passIn();
             } elseif ($this->needPassOut()) {
                 $this->passOut();
             }
-            /** @noinspection PhpUnusedLocalVariableInspection */
-            $latestVersion = $this->getTestsConfiguration()->getExpectedLastUnstableVersion();
             \ob_start();
             /** @noinspection PhpIncludeInspection */
             include DRD_PLUS_INDEX_FILE_NAME_TO_TEST;
@@ -134,10 +137,14 @@ abstract class AbstractContentTest extends SkeletonTestCase
 
     protected function isFrontendSkeletonChecked(): bool
     {
-        $documentRootRealPath = \realpath($this->getDocumentRoot());
-        $frontendSkeletonRealPath = \realpath(__DIR__ . '/../../../..');
+        if ($this->frontendSkeletonChecked === null) {
+            $documentRootRealPath = \realpath($this->getDocumentRoot());
+            $frontendSkeletonRealPath = \realpath(__DIR__ . '/../../../..');
 
-        return $documentRootRealPath === $frontendSkeletonRealPath;
+            $this->frontendSkeletonChecked = $documentRootRealPath === $frontendSkeletonRealPath;
+        }
+
+        return $this->frontendSkeletonChecked;
     }
 
     protected function getCurrentPageTitle(HTMLDocument $document = null): string

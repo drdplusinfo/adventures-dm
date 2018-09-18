@@ -1,12 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace DrdPlus\RulesSkeleton\Web;
+namespace DrdPlus\FrontendSkeleton\Web;
 
-use DrdPlus\FrontendSkeleton\Web\Body;
-use DrdPlus\FrontendSkeleton\Web\WebFiles;
-use DrdPlus\RulesSkeleton\HtmlHelper;
-use DrdPlus\RulesSkeleton\Request;
+use DrdPlus\FrontendSkeleton\HtmlHelper;
+use DrdPlus\FrontendSkeleton\Request;
 
 class TablesBody extends Body
 {

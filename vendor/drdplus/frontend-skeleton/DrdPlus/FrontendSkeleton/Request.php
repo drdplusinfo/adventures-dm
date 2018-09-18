@@ -13,6 +13,9 @@ class Request extends StrictObject
     public const UPDATE = 'update';
     public const CACHE = 'cache';
     public const DISABLE = 'disable';
+    public const TABLES = 'tables';
+    public const TABULKY = 'tabulky';
+    public const CONFIRM = 'confirm';
 
     /** @var Bot */
     private $botParser;
@@ -79,5 +82,40 @@ class Request extends StrictObject
     public function getValuesFromGet(): array
     {
         return $_GET ?? [];
+    }
+
+    public function getValueFromPost(string $name)
+    {
+        return $_POST[$name] ?? null;
+    }
+
+    public function getValueFromGet(string $name)
+    {
+        return $_GET[$name] ?? null;
+    }
+
+    /**
+     * @return array|string[]
+     */
+    public function getWantedTablesIds(): array
+    {
+        $wantedTableIds = \array_map(
+            function (string $id) {
+                return \trim($id);
+            },
+            \explode(',', $_GET[self::TABLES] ?? $_GET[self::TABULKY] ?? '')
+        );
+
+        return \array_filter(
+            $wantedTableIds,
+            function (string $id) {
+                return $id !== '';
+            }
+        );
+    }
+
+    public function areRequestedTables(): bool
+    {
+        return $this->getValueFromGet(self::TABLES) !== null || $this->getValueFromGet(self::TABULKY) !== null;
     }
 }
