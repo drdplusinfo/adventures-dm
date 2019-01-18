@@ -1,11 +1,9 @@
 web:
-  last_stable_version: 'master'
-  repository_url: git@bitbucket.org:drdplusinfo/adventures-dm-web.git
   protected_access: false
-  eshop_url: https://obchod.altar.cz/draci-doupe-a-jine-rpg-hry-draci-doupe-plus-c-1_7.html
+  eshop_url: 'https://obchod.altar.cz/drd-prirucka-pj-everze-p-1012.html'
   menu_position_fixed: false
   show_home_button: true
-  name: DrD+ dobrodružství
-  title_smiley: 💥
+  name: 'DrD+ dobrodružství'
+  title_smiley: '💥'
 google:
-  analytics_id: UA-121206931-3
+  analytics_id: 'UA-121206931-3'

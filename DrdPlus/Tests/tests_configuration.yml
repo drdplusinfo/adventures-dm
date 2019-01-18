@@ -1,0 +1,16 @@
+public_url: 'https://dobrodruzstvi.ppj.drdplus.info'
+has_protected_access: false
+has_authors: false
+has_tables: false
+has_links_to_journals: false
+has_link_to_single_journal: false
+has_debug_contacts: false
+has_more_versions: false
+has_custom_body_content: false
+has_table_of_contents: false
+expected_last_version: 'master'
+some_expected_table_ids: []
+expected_web_name: 'DrD+ dobrodružství'
+expected_page_title: '💥 DrD+ dobrodružství'
+expected_google_analytics_id: 'UA-121206931-3'
+can_be_bought_on_eshop: false
