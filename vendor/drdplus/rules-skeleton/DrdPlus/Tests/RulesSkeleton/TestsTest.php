@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace DrdPlus\Tests\RulesSkeleton;
 
+use Composer\Plugin\PluginInterface;
+use DrdPlus\RulesSkeleton\SkeletonInjectorComposerPlugin;
 use DrdPlus\Tests\RulesSkeleton\Partials\AbstractContentTest;
 use DrdPlus\Tests\RulesSkeleton\Partials\TestsConfigurationReaderTest;
 
@@ -46,6 +48,12 @@ class TestsTest extends AbstractContentTest
             ) {
                 continue;
             }
+            if ($testClass === SkeletonInjectorComposerPlugin::class) {
+                self::assertTrue(
+                    \interface_exists(PluginInterface::class),
+                    "Composer package is required for this test, include it by\ncomposer require --dev composer/composer"
+                );
+            }
             $testedClass = static::getSutClass($testClass);
             self::assertTrue(
                 \class_exists($testedClass),
@@ -79,7 +87,7 @@ class TestsTest extends AbstractContentTest
             CalculationsTest::class,
             SourceCodeLinksTest::class,
             TestsConfigurationReaderTest::class,
-            TableOfContentTest::class,
+            TableOfContentsTest::class,
             GitTest::class,
         ];
     }
