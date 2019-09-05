@@ -12,6 +12,7 @@ can_be_bought_on_eshop: false
 some_expected_table_ids: []
 has_links_to_altar: false
 has_calculations: false
+has_marked_result: false
 has_pdf: false
 expected_web_name: 'DrD+ dobrodružství'
 expected_page_title: '💥 DrD+ dobrodružství'

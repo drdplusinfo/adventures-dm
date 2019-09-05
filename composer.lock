@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "drdplus/rules-skeleton",
-            "version": "1.6.0",
+            "version": "1.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-                "reference": "1b4c3fda903574f139df15e959ee44670d72c2eb"
+                "reference": "0dc416604dde774fac164b5a49034fab582d526d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/1b4c3fda903574f139df15e959ee44670d72c2eb",
-                "reference": "1b4c3fda903574f139df15e959ee44670d72c2eb",
+                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/0dc416604dde774fac164b5a49034fab582d526d",
+                "reference": "0dc416604dde774fac164b5a49034fab582d526d",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2019-08-28T06:11:39+00:00"
+            "time": "2019-09-05T14:10:37+00:00"
         },
         {
             "name": "drdplus/web-versions",
@@ -155,16 +155,16 @@
         },
         {
             "name": "granam/git",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/granam/git.git",
-                "reference": "4ab6eb312a0b7cb4ac1c414ccc84f1f80341d796"
+                "reference": "d01c93b17c15996dd7f96092e06b64739a3606bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/granam/git/zipball/4ab6eb312a0b7cb4ac1c414ccc84f1f80341d796",
-                "reference": "4ab6eb312a0b7cb4ac1c414ccc84f1f80341d796",
+                "url": "https://api.github.com/repos/granam/git/zipball/d01c93b17c15996dd7f96092e06b64739a3606bc",
+                "reference": "d01c93b17c15996dd7f96092e06b64739a3606bc",
                 "shasum": ""
             },
             "require": {
@@ -194,7 +194,7 @@
                 "tag",
                 "versions"
             ],
-            "time": "2019-08-26T13:33:59+00:00"
+            "time": "2019-09-04T11:51:57+00:00"
         },
         {
             "name": "granam/scalar",
@@ -406,16 +406,16 @@
         },
         {
             "name": "granam/web-content-builder",
-            "version": "2.0.1",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/granam/web-content-builder.git",
-                "reference": "5d7206ffae7d0526b0ba4c1f5fc72b119eca7acd"
+                "reference": "e2f9c54f89852b83897b3f18faf5d59f682d83a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/granam/web-content-builder/zipball/5d7206ffae7d0526b0ba4c1f5fc72b119eca7acd",
-                "reference": "5d7206ffae7d0526b0ba4c1f5fc72b119eca7acd",
+                "url": "https://api.github.com/repos/granam/web-content-builder/zipball/e2f9c54f89852b83897b3f18faf5d59f682d83a4",
+                "reference": "e2f9c54f89852b83897b3f18faf5d59f682d83a4",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +458,7 @@
                 "html",
                 "web"
             ],
-            "time": "2019-08-23T06:57:57+00:00"
+            "time": "2019-09-05T07:19:28+00:00"
         },
         {
             "name": "granam/yaml-reader",
